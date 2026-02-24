@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <!-- Primary Meta -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Team Space | Student Collaboration Platform</title>
+    <meta name="title" content="Team Space - Student Collaboration & Hackathon Platform">
+    <meta name="description"
+          content="Team Space helps students manage teams, tasks, files and GitHub repositories in one powerful centralized platform built for hackathons and college projects.">
+    <meta name="keywords"
+          content="Team collaboration, Hackathon platform, Student SaaS, Task management, GitHub integration, Project management tool">
+    <meta name="author" content="Team Space">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Team Space - Build. Collaborate. Win.">
+    <meta property="og:description" content="Centralized student collaboration platform for hackathons and projects.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1552664730-d307ca884978">
+    <meta property="og:url" content="https://teamspace.com">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Team Space - Student Collaboration SaaS">
+    <meta name="twitter:description" content="Manage teams, tasks and GitHub in one place.">
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1552664730-d307ca884978">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+
+<body>
+<nav class="navbar">
+    <div class="logo">
+        <i class="fa-solid fa-rocket"></i>
+        <span>Team Space</span>
+    </div>
+
+    <!-- Hamburger -->
+    <div class="hamburger" id="hamburger">
+        <i class="fa-solid fa-bars"></i>
+    </div>
+
+    <div class="nav-links" id="navLinks">
+        <a href="#features">Features</a>
+        <a href="#faq">FAQs</a>
+        <a href="#team">Team</a>
+        <button onclick="redirectToLogin()" class="btn-primary">
+            <i class="fa-solid fa-right-to-bracket"></i> Login
+        </button>
+    </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <h1>Build Smarter. Collaborate Faster.</h1>
+        <p>
+            A centralized student collaboration platform designed for hackathons,
+            college projects and real team productivity.
+        </p>
+        <div class="hero-buttons">
+            <button onclick="redirectToLogin()" class="btn-primary">
+                <i class="fa-solid fa-user-plus"></i> Get Started
+            </button>
+            <button onclick="redirectToHome()" class="btn-outline">
+                <i class="fa-solid fa-compass"></i> Explore
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- Features -->
+<section id="features" class="section">
+    <div class="section-header">
+        <h2>Core Features</h2>
+        <p>Focused tools built for real student collaboration.</p>
+    </div>
+
+    <div class="feature-grid">
+
+        <div class="card">
+            <i class="fa-solid fa-users"></i>
+            <h3>Team Management</h3>
+            <p>Create teams, assign roles and manage members securely.</p>
+        </div>
+
+        <div class="card">
+            <i class="fa-solid fa-list-check"></i>
+            <h3>Task Tracking</h3>
+            <p>Organize workflow using structured Kanban boards.</p>
+        </div>
+
+        <div class="card">
+            <i class="fa-brands fa-github"></i>
+            <h3>GitHub Linking</h3>
+            <p>Attach repositories and monitor activity.</p>
+        </div>
+
+        <div class="card">
+            <i class="fa-solid fa-folder"></i>
+            <h3>File Storage</h3>
+            <p>Centralized document storage for every project.</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- Why Section -->
+<section class="section dark-section">
+    <div class="section-header">
+        <h2>Why Choose Team Space?</h2>
+    </div>
+    <p class="why-text">
+        Designed specifically for students and hackathons.
+        No unnecessary complexity. Clean workflow.
+        Built for speed, structure and scalability.
+    </p>
+</section>
+
+<!-- How It Works -->
+<section class="section">
+    <div class="section-header">
+        <h2>How It Works</h2>
+    </div>
+
+    <div class="steps">
+        <div class="step">
+            <i class="fa-solid fa-user-plus"></i>
+            <h3>Create Account</h3>
+        </div>
+        <div class="step">
+            <i class="fa-solid fa-people-group"></i>
+            <h3>Create Team</h3>
+        </div>
+        <div class="step">
+            <i class="fa-solid fa-diagram-project"></i>
+            <h3>Manage Projects</h3>
+        </div>
+    </div>
+</section>
+
+<!-- Team Section -->
+<section id="team" class="section dark-section">
+    <div class="section-header">
+        <h2>Meet the Founder</h2>
+    </div>
+
+    <div class="team-card">
+        <i class="fa-solid fa-user-astronaut team-icon"></i>
+        <h3>Anuj Chourasiya</h3>
+        <p>Founder & Developer of Team Space</p>
+        <div class="team-social">
+            <a href="https://github.com/Anuj-code-AI" target="_blank"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/anujchourasiya" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/anuj_chourasiya8/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="section">
+    <div class="section-header">
+        <h2>Frequently Asked Questions</h2>
+    </div>
+
+    <div class="faq">
+        <div class="faq-item">
+            <h3>Is Team Space free?</h3>
+            <p>Yes. During early student phase it is completely free.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Does it store source code?</h3>
+            <p>No. Only links and metadata are stored. Code stays on GitHub.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Who is it built for?</h3>
+            <p>Hackathon teams, college project groups and student innovators.</p>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+    <h2>Start Your Next Project with Structure</h2>
+    <button onclick="redirectToLogin()" class="btn-primary">
+        <i class="fa-solid fa-arrow-right"></i> Join Now
+    </button>
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>© 2026 Team Space. Built for Innovators.</p>
+</footer>
+
+<script th:src="@{/js/index.js}"></script>
+</body>
+
+</html>

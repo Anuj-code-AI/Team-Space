@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" th:href="@{/css/team.css}">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    </script>
+</head>
+
+<body>
+<header>
+    <nav class="navbar">
+        <div class="logo">
+            <i class="fa-solid fa-rocket"></i>
+            <span>Team Space</span>
+        </div>
+
+        <!-- Hamburger -->
+        <div class="hamburger" id="hamburger">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+
+
+
+        <div class="nav-links" id="navLinks">
+            <div class="search-bar">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="search" placeholder="Search..." />
+            </div>
+            <a href="#"><i class="fa-regular fa-bell"></i></a>
+            <a href="#"><i class="fa-solid fa-gear"></i></a>
+            <button id="authBtn" class="btn-primary"></button>
+        </div>
+    </nav>
+</header>
+<div></div>
+<div class="main-section">
+    <nav id="sidebar">
+        <ul>
+            <li>
+                <span class="logo">coding2go</span>
+                <button onclick="toggleSideBar()" id="toggle-btn">
+                    <i class="fa-solid fa-angles-left"></i>
+                </button>
+            </li>
+            <li>
+                <a href="/home">
+                    <i class="fa-solid fa-home"></i>
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa-solid fa-dashboard"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+            <li class="active">
+                <button onclick="toggleSubMenuForTeam(this); loadTeams(this);" class="dropdown-btn">
+                    <i class="fa-solid fa-people-group"></i>
+                    <span>Team</span>
+                    <i class="fa-solid fa-angle-down"></i>
+                </button>
+                <ul class="sub-menu">
+                    <div>
+                        <li><a onclick="createTeam()"><i class="fa-solid fa-user-plus"></i>Create Team </a></li>
+                    </div>
+                </ul>
+                <ul class="sub-menu" id="teamSubMenu">
+                    <!-- Teams will be injected here -->
+                </ul>
+            </li>
+            <li>
+                <button onclick="toggleSubMenu(this)" class="dropdown-btn">
+                    <i class="fa-solid fa-rocket"></i>
+                    <span>ToDO-List</span>
+                    <i class="fa-solid fa-angle-down"></i>
+                </button>
+                <ul class="sub-menu">
+                    <div>
+                        <li><a href="#">Presentation</a></li>
+                        <li><a href="#">Code</a></li>
+                        <li><a href="#">Chat</a></li>
+                        <li><a href="#">Links</a></li>
+                        <li><a href="#">Meet</a></li>
+                    </div>
+
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa-solid fa-calendar"></i>
+                    <span>Calendar</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa-solid fa-user"></i>
+                    <span>Profile</span>
+                </a>
+            </li>
+
+        </ul>
+    </nav>
+    <!-- Create Team Modal -->
+    <div id="teamModal" class="modal">
+        <div class="modal-card">
+            <i class="fa-solid fa-users modal-icon"></i>
+            <h2>Create New Team</h2>
+
+            <form id="teamForm">
+                <input type="text" id="teamName" placeholder="Team Name *" required>
+
+                <textarea id="teamDescription"
+                          placeholder="Description (optional)"></textarea>
+
+                <div class="modal-buttons">
+                    <button type="button" class="cancel-btn" onclick="closeModal()">Cancel</button>
+                    <button type="submit" class="create-btn">Create</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <main>
+        <div class="container">
+            <h2>Hello World</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi molestiae eos error, animi ab
+                consectetur iusto commodi omnis at dolorum!3Lorem ipsum dolor sit, amet consectetur adipisicing
+                elit.
+                Rem, incidunt.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, rerum.</p>
+        </div>
+        <div class="container">
+            <h2>Example Heading</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum, doloremque?</p>
+        </div>
+        <div class="container">
+            <h2>Example Heading</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. In sed vero eligendi quaerat omnis placeat
+                voluptate hic labore, ab maiores consectetur mollitia excepturi dolorum, itaque veritatis ducimus
+                provident asperiores! Ratione suscipit, illum vero numquam rem id laborum alias at, recusandae
+                beatae
+                eaque hic animi facilis, ipsum dicta cumque praesentium dolor?Lorem ipsum dolor sit, amet
+                consectetur
+                adipisicing elit. Consequuntur expedita, fugiat quia reprehenderit dignissimos excepturi!Lorem ipsum
+                dolor sit amet consectetur, adipisicing elit. Dolorum, doloremque?</p>
+        </div>
+    </main>
+</div>
+<script th:src="@{/js/auth.js}"></script>
+<script th:src="@{/js/home.js}"></script>
+<script th:src="@{/js/index.js}"></script>
+</body>
+
+</html>

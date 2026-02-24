@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Team Space | Authentication</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" th:href="@{/css/auth.css}">
+</head>
+
+<body>
+
+<div class="auth-container">
+
+    <div class="auth-card">
+
+        <div class="auth-header">
+            <i class="fa-solid fa-rocket logo-icon"></i>
+            <h2 id="authTitle">Welcome to Team Space</h2>
+            <p>Sign in or create your account</p>
+        </div>
+
+        <!-- OAuth Buttons -->
+        <div id="oauthSection">
+
+            <button class="oauth-btn google" onclick="redirectOAuth('google')">
+                <i class="fa-brands fa-google"></i>
+                Continue with Google
+            </button>
+
+            <button class="oauth-btn github" onclick="redirectOAuth('github')">
+                <i class="fa-brands fa-github"></i>
+                Continue with GitHub
+            </button>
+
+            <div class="divider">
+                <span>OR</span>
+            </div>
+
+            <button class="email-btn" onclick="showEmailForm()">
+                <i class="fa-solid fa-envelope"></i>
+                Continue with Email
+            </button>
+
+        </div>
+
+        <!-- Email Form (Hidden Initially) -->
+        <div id="emailSection" class="hidden">
+
+            <form id="authForm" method="post">
+                <div id="nameField" class="input-group hidden">
+                    <i class="fa-solid fa-user"></i>
+                    <input id="name" name="name" type="text" placeholder="Full Name">
+                </div>
+
+                <div class="input-group">
+                    <i class="fa-solid fa-envelope"></i>
+                    <input id="email" name="email" type="email" placeholder="Email" required>
+                </div>
+
+                <div class="input-group">
+                    <i class="fa-solid fa-lock"></i>
+                    <input id="password" name="password" type="password" placeholder="Password" required>
+                </div>
+
+                <button id="submit" type="submit" class="primary-btn">
+                    <span id="submitText">Login</span>
+                </button>
+            </form>
+
+            <p class="switch-text">
+                <span id="switchMessage">Don't have an account?</span>
+                <a href="#" onclick="toggleMode()">Register</a>
+            </p>
+
+            <p class="back-text">
+                <a href="#" onclick="goBack()">← Back</a>
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script th:src="@{/js/auth.js}"></script>
+</body>
+
+</html>

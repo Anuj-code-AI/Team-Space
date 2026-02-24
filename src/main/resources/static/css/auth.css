@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #0f172a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: white;
+}
+
+.auth-container {
+    width: 100%;
+    max-width: 420px;
+    padding: 20px;
+}
+
+.auth-card {
+    background: #1e293b;
+    padding: 40px 30px;
+    border-radius: 14px;
+}
+
+.auth-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.logo-icon {
+    font-size: 40px;
+    color: #3b82f6;
+    margin-bottom: 10px;
+}
+
+.oauth-btn,
+.email-btn,
+.primary-btn {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    margin-bottom: 15px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.google {
+    background: white;
+    color: black;
+}
+
+.github {
+    background: #111;
+    color: white;
+}
+
+.email-btn {
+    background: transparent;
+    border: 1px solid #3b82f6;
+    color: white;
+}
+
+.primary-btn {
+    background: #3b82f6;
+    color: white;
+}
+
+.divider {
+    text-align: center;
+    margin: 15px 0;
+    opacity: 0.6;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    background: #0f172a;
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+}
+
+.input-group i {
+    margin-right: 10px;
+    opacity: 0.7;
+}
+
+.input-group input {
+    border: none;
+    background: transparent;
+    color: white;
+    outline: none;
+    width: 100%;
+}
+
+.switch-text,
+.back-text {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.switch-text a,
+.back-text a {
+    color: #3b82f6;
+    text-decoration: none;
+}
+
+.hidden {
+    display: none;
+}
